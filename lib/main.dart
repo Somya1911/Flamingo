@@ -24,8 +24,8 @@ class HomePage extends StatelessWidget {
       body: Stack(
         children: <Widget>[
             Container(
-              height: MediaQuery.of(context).size.height,
-              width: MediaQuery.of(context).size.width,
+              height: size.height,
+              width: size.width,
               decoration: BoxDecoration(
                 image: DecorationImage(
                 image: AssetImage('assets/images/flamingo_background.png'),
@@ -61,6 +61,7 @@ class HomePage extends StatelessWidget {
                         ]
                       ),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
                     Container(
                       padding: EdgeInsets.all(8.0),
@@ -74,6 +75,19 @@ class HomePage extends StatelessWidget {
                           hintStyle: TextStyle(color: Colors.grey[400])
                         )
                       )
+                    ),
+                    Container(
+                        padding: EdgeInsets.all(8.0),
+                        decoration: BoxDecoration(
+                            border: Border(bottom: BorderSide(color: Colors.grey[100]))
+                        ),
+                        child: TextField(
+                            decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: "Password",
+                                hintStyle: TextStyle(color: Colors.grey[400])
+                            )
+                        )
                     )
                   ]
                       )
